@@ -52,6 +52,7 @@ newGreeting("Blake");
 function add(num1, num2){
   return num1 + num2;
 }
+let sum = add(7,8);
 console.log(add(7,8));
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -117,7 +118,7 @@ printALlNames(namesArr);
 //CODE HERE
 function thatsOdd(num){
   if((num % 2) !== 0) return "That's not odd!"
-  else return "That is odd indeed"
+  else return "That is odd indeed!"
 }
 let oddChecker = thatsOdd(9);
 console.log(oddChecker);
@@ -174,7 +175,7 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 function upUP(str){
-  console.log(str.toUpperCase);
+  console.log(str.toUpperCase());
 }
 upUP(sampleString);
 
