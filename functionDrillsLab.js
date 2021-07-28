@@ -6,7 +6,10 @@
 
 //CODE HERE
 
-
+function helloWorld(){
+  console.log("Hello world");
+}
+helloWorld();
 ////////////////// PROBLEM 2 ////////////////////
 /*
   Create a function called printName which takes in a persons name and console logs it.
@@ -15,6 +18,10 @@
 */
 
 //CODE HERE
+function printName(name){
+  console.log(name);
+}
+printName("Blake");
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -28,6 +35,10 @@
 */
 
 //CODE HERE
+function newGreeting(name){
+  console.log("Hello, " + name);
+}
+newGreeting("Blake");
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -38,7 +49,10 @@
 */
 
 //CODE HERE
-
+function add(num1, num2){
+  return num1 + num2;
+}
+console.log(add(7,8));
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -50,6 +64,14 @@
 */
 
 //CODE HERE
+function nameCheck(name){
+  if(name == "Steven") return "What is up Steven?"
+  else if(name === "Bryan") return "Hey Bryan!"
+  else return `Cool name, ${name}`;
+}
+console.log(nameCheck("Steven"));
+console.log(nameCheck("Bryan"));
+console.log(nameCheck("Blake"));
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -63,8 +85,13 @@
 */
 
 //CODE HERE
-
-
+function faveColorFinder(color){
+  if(color === "red") return "red is a great color"
+  else if(color === "green" ) return "green is a solid favorite color"
+  else if(color === "black") return "so trendy"
+  else return "you need to evaluate your favorite color choice"
+}
+let colorRating = faveColorFinder("black");
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
@@ -74,7 +101,10 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function printALlNames(names){
+  for(let i = 0; i < names.length; i++) console.log(names[i]);
+}
+printALlNames(namesArr);
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -85,7 +115,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function thatsOdd(num){
+  if((num % 2) !== 0) return "That's not odd!"
+  else return "That is odd indeed"
+}
+let oddChecker = thatsOdd(9);
+console.log(oddChecker);
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -99,7 +134,16 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
-
+function bigOrSmall(arr){
+  let answers = [];
+  for(let i =0; i < arr.length; i++){
+    if(arr[i] > 100) answers.push("big");
+    else answers.push("small")
+  }
+  return answers;
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
+console.log(arrayEvaluator);
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -110,6 +154,16 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator(contestants, loser){
+  for(let i = 0; i < contestants.length; i++){
+    if(contestants[i] === loser) {
+      contestants.splice(i,1);
+      break;
+    }
+  }
+  return contestants;
+}
+console.log(theEliminator(contestants, loser))
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -119,7 +173,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function upUP(str){
+  console.log(str.toUpperCase);
+}
+upUP(sampleString);
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -128,7 +185,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function buyFrogs(numGold){
+  let numFrogs = numGold / 3;
+  console.log(`You can buy ${numFrogs} frogs`)
+  return numFrogs;
+}
+let totalFrogs = buyFrogs(15);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -136,7 +198,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function buyFrogs2(numGold){
+  let numFrogs = numGold / 3;
+  numFrogs = Math.floor(numFrogs);
+  console.log(`You can buy ${numFrogs} frogs`)
+  return numFrogs;
+}
+let totalFrogs2 = buyFrogs2(14);
 
 ////////////////// PROBLEM 14 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -145,7 +213,16 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-
+function isAscending(arr){
+  for(let i = 1; i < arr.length; i++){
+    if(arr[i] < arr[i - 1]) {
+      return false
+    }
+  }
+  return true;
+}
+let arrayIsAscending = isAscending(sampleArray);
+console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 15 ////////////////////
 
@@ -169,13 +246,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["cute"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["squeaky"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["nautical"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["fluffy"]
